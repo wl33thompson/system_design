@@ -1,0 +1,19 @@
+
+
+server:
+    tomcat:
+        threads:
+            max: 3
+            min-spare: 3
+        max-connections: 4
+        acceptCount: 1
+
+    port: 8088
+
+#    undertow:
+#      threads:
+#          io: 1
+
+#logging:
+#    level:
+#        root: trace
