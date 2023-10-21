@@ -10,9 +10,9 @@ server:
 
     port: 8088
 
-#    undertow:
-#      threads:
-#          io: 1
+    undertow:
+      threads:
+          worker: 8
 
 #logging:
 #    level:

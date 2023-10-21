@@ -12,7 +12,7 @@ public class HelloController {
     String hello(){
 //        System.out.println(Thread.currentThread().getName());
         try {
-            Thread.sleep(10*60*000);
+            Thread.sleep(0);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
