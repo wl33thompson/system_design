@@ -19,8 +19,13 @@ public class HelloController {
         return "hello world!";
     }
 
-    @GetMapping("/hello2")
-    Integer hello2(){
-        return 0;
+    @GetMapping("/hello_100")
+    String hello2(){
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return "hello_100";
     }
 }

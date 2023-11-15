@@ -12,8 +12,9 @@ server:
 
     undertow:
       threads:
-          worker: 8
+          worker: 5000
 
 #logging:
 #    level:
 #        root: trace
+

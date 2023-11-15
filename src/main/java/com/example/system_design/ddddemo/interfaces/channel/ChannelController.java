@@ -1,13 +1,15 @@
 package com.example.system_design.ddddemo.interfaces.channel;
 
 import com.example.system_design.ddddemo.application.channel.ChannelApplicationInterface;
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ChannelController {
+public class ChannelController implements InitializingBean {
 
     @Autowired
     ChannelApplicationInterface channelApplicationInterface;
@@ -22,4 +24,15 @@ public class ChannelController {
 //            // Process the id parameter and return a response
 //            return "Requested data for ID: " + id;
 //        }
+
+    @PostConstruct
+    void test1(){
+        System.out.println("PostConstruct");
+    }
+
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("afterPropertiesSet");
+    }
 }
