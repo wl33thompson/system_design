@@ -6,7 +6,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.listener.api.ChannelAwareMessageListener;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class RabbitMQConsumer implements ChannelAwareMessageListener {
 
     @Override
